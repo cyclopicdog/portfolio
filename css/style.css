@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Oxygen", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+/* nav bar */
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: 95%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.nav-box {
+  flex: 1;
+  /* this makes it stretch you dummy */
+  padding: 8px;
+  background-color: #ffc3c2;
+  text-align: center;
+  font-weight: bold;
+  color: #3b4043;
+}
+
+.nav-box__link {
+  flex: 1;
+  padding: 8px;
+  background-color: #3b4043;
+  color: #ffc3c2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-box__link:hover {
+  background-color: #ffc3c2;
+  color: #01291e;
+  font-weight: bold;
+}
+
+/* header */
+
+.header {
+  width: 95%;
+  height: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-content: center;
+  margin-top: 30px;
+  background-image: url("../img/hanoi.jpg");
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #ffc3c2;
+}
+
+.page-heading {
+  font-size: 2rem;
+  padding-left: 50px;
+}
+
+.page-heading--sub {
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+
+/* main section */
+
+.main {
+  width: 95%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.creation-steps {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #3b4043;
+  color: #ffc3c2;
+}
+
+.step {
+  width: 20%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.skills-bar {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.skill-name {
+  width: 15%;
+  background-color: #01291e;
+  color: #ffc3c2;
+}
+
+.skill-level {
+  width: 84%;
+}
+
+.skill-progress-bar {
+  width: 50%;
+  background-color: #008f69;
+}
+
+.skill-percent {
+  width: 49%;
+  text-align: right;
+  background-color: #ffc3c2;
+  color: #008f69;
+}
