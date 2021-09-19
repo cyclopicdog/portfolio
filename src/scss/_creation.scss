@@ -1,0 +1,44 @@
+/* creation steps */
+
+.creation {
+  width: 100%;
+  background-color: $bkg-one;
+  color: $light-text;
+  &__steps-container {
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: auto;
+    gap: 3%;
+  }
+  &__step {
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+  }
+  &__heading {
+    padding: 10px 0;
+    color: $white-text;
+  }
+  &__content {
+    height: 100%;
+  }
+  &__circle {
+    width: 150px;
+    height: 150px;
+    margin-top: -418.5px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  &__circle-half {
+    width: 100%;
+    height: 75px;
+    margin-top: 75px;
+    background-color: $light-text;
+  }
+}

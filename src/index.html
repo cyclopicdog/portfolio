@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body id="top">
     <!-- navbar -->
 
     <nav class="nav">
-      <p class="nav__link nav__link--icon" id="top">
+      <p class="nav__link nav__link--icon">
         <img src="/img/cyclopicdog-20-16.png" alt="dog" class="nav__icon"/>
       </p>
 
@@ -45,11 +45,11 @@
 
     <!-- header -->
 
-    <header class="header" id="top">
-      <h1 class="page-heading">
-        <span class="page-heading--main">Jon Doig</span>
-        <span class="page-heading--sub">Full stack web developer</span>
-      </h1>
+    <header class="header">
+        <div class="header__content">
+          
+          <h1 class="header__page-heading header__page-heading--main heading">Jon Doig <span class="header__page-heading header__page-heading--sub heading">Full stack web developer</span></h1>
+        </div>
     </header>
 
 <!-- main section -->
@@ -66,43 +66,45 @@
 
       <!-- creation process -->
 
-      <section class="creation-steps">
-        <article class="creation-steps step">
-          <h3 class="step__heading">Understand</h3>
-          <p class="step__content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis perspiciatis quos ipsam at blanditiis, debitis numquam
-            eius eveniet vero, adipisci similique, placeat quaerat magni ipsum
-            optio sapiente.
-          </p>
-        </article>
-        <article class="creation-steps step">
-          <h3 class="step step__heading">Create</h3>
-          <p class="step step__content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis perspiciatis quos ipsam at blanditiis, debitis numquam
-            eius eveniet vero, adipisci similique, placeat quaerat magni ipsum
-            optio sapiente.
-          </p>
-        </article>
-        <article class="creation-steps step">
-          <h3 class="step step__heading">See</h3>
-          <p class="step step__content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis perspiciatis quos ipsam at blanditiis, debitis numquam
-            eius eveniet vero, adipisci similique, placeat quaerat magni ipsum
-            optio sapiente.
-          </p>
-        </article>
-        <article class="creation-steps step">
-          <h3 class="step step__heading">Be seen</h3>
-          <p class="step step__content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis perspiciatis quos ipsam at blanditiis, debitis numquam
-            eius eveniet vero, adipisci similique, placeat quaerat magni ipsum
-            optio sapiente.
-          </p>
-        </article>
+      <section class="creation">
+        <div class="creation__steps-container">
+          <article class="creation__step">
+            <h3 class="creation__heading heading">Understand</h3>
+            <p class="creation__content">
+              Tell me about your project and goals. Together we'll come up with the initial ideas for your future site.
+            </p>
+            <div class="creation__circle">
+              <div class="creation__circle-half"></div>
+            </div>
+          </article>
+          <article class="creation__step">
+            <h3 class="creation__heading heading">Create</h3>
+            <p class="creation__content">
+              We create a wireframe mock-up your site and discuss how we can deliver the best possible experience for your brand.
+            </p>
+             <div class="creation__circle">
+              <div class="creation__circle-half"></div>
+            </div>
+          </article>
+          <article class="creation__step">
+            <h3 class="creation__heading heading">Develop</h3>
+            <p class="creation__content">
+              After creating the prototype, we'll work closely together to incorporate your feedback and finalise the project.
+            </p>
+             <div class="creation__circle">
+              <div class="creation__circle-half"></div>
+            </div>
+          </article>
+          <article class="creation__step">
+            <h3 class="creation__heading heading">Launch</h3>
+            <p class="creation__content">
+              We'll deploy your product and website, targeting your audience to maximise traction and growth. 
+            </p>
+             <div class="creation__circle">
+              <div class="creation__circle-half"></div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!-- skills tables -->
