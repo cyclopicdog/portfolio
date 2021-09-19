@@ -10,19 +10,40 @@
       href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <!-- header -->
+    <!-- navbar -->
+
     <nav class="nav">
-      <p class="nav-box" id="top">JD</p>
-      <a href="#top" class="nav-box__link">home</a>
-      <a href="#skills" class="nav-box__link">skills</a>
-      <a href="#portfolio" class="nav-box__link">portfolio</a>
-      <a href="#about" class="nav-box__link">about me</a>
-      <a href="#contact" class="nav-box__link">contact</a>
+      <p class="nav__link nav__link--icon" id="top">
+        <img src="/img/cyclopicdog-20-16.png" alt="dog" class="nav__icon"/>
+      </p>
+
+      <div class="nav__dropdown">
+        
+        <div class="nav__dropdown-button"><img src="/img/cyclopicdog-20-16.png" alt="dog" class="nav__icon" /><span class=>Menu</span></div>
+        
+        <div class="nav__dropdown-menu">
+          <a href="#top" class="nav__link nav__link-dropdown">home</a></option>
+          <a href="#skills" class="nav__link nav__link-dropdown">skills</a>
+          <a href="#portfolio" class="nav__link nav__link-dropdown">portfolio</a>
+          <a href="#about" class="nav__link nav__link-dropdown">about me</a>
+          <a href="#contact" class="nav__link nav__link-dropdown">contact</a>
+        </div>
+
+      </div>
+
+
+        <a href="#top" class="nav__link nav__link-navbar">home</a>
+        <a href="#skills" class="nav__link nav__link-navbar">skills</a>
+        <a href="#portfolio" class="nav__link nav__link-navbar">portfolio</a>
+        <a href="#about" class="nav__link nav__link-navbar">about me</a>
+        <a href="#contact" class="nav__link nav__link-navbar">contact</a>
     </nav>
+
+    <!-- header -->
 
     <header class="header" id="top">
       <h1 class="page-heading">
@@ -31,12 +52,14 @@
       </h1>
     </header>
 
-    <!-- intro -->
+<!-- main section -->
 
     <main class="main">
-      <section class="main intro">
-        <p class="intro intro__p">
-          Working with <strong>you</strong> and ensuring that
+    <!-- intro -->
+
+      <section class="intro">
+        <p class="intro__p">
+          Working with <strong>you</strong> to ensure that
           <strong>your product</strong> is <strong>seen</strong>.
         </p>
       </section>
@@ -45,8 +68,8 @@
 
       <section class="creation-steps">
         <article class="creation-steps step">
-          <h3 class="step step__heading">Find out</h3>
-          <p class="step step__content">
+          <h3 class="step__heading">Understand</h3>
+          <p class="step__content">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Perferendis perspiciatis quos ipsam at blanditiis, debitis numquam
             eius eveniet vero, adipisci similique, placeat quaerat magni ipsum

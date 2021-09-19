@@ -1,0 +1,22 @@
+@mixin nav-buttons() {
+  width: 100%;
+  padding: 8px 0;
+  color: $light-text;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  &:hover {
+    background-color: $light-text;
+    color: $bkg-one;
+    font-weight: bold;
+  }
+  &--icon {
+    background-color: $bkg-one;
+    color: $bkg-one;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $bkg-two;
+    }
+  }
+}

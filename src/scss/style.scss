@@ -1,3 +1,7 @@
+@import "variables";
+@import "mixins";
+@import "intro";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +13,7 @@ html {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -21,37 +26,101 @@ body {
 /* nav bar */
 
 .nav {
+  width: 100%;
+  height: auto;
   position: sticky;
   top: 0;
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  background-color: $bkg-one;
+  border-bottom: 1px solid $light-text;
 
-.nav-box {
-  flex: 1;
-  /* this makes it stretch you dummy */
-  padding: 8px;
-  background-color: #ffc3c2;
-  text-align: center;
-  font-weight: bold;
-  color: #803c3b;
-}
+  &__icon {
+    padding: 0 5px;
+  }
 
-.nav-box__link {
-  flex: 1;
-  padding: 8px;
-  background-color: #803c3b;
-  color: #ffc3c2;
-  text-align: center;
-  text-decoration: none;
-  border-bottom: 1px solid #ffc3c2;
-}
+  // Hide the dropdown menu
+  &__dropdown {
+    display: none;
+    position: relative;
+  }
 
-.nav-box__link:hover {
-  background-color: #ffc3c2;
-  color: #803c3b;
-  font-weight: bold;
+  // Nav dropdown buttons
+  &__dropdown-menu {
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    display: none;
+  }
+
+  // style the dropdown button
+  &__dropdown-button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 8px 0;
+    font-size: 1em;
+    color: $light-text;
+    background-color: $bkg-one;
+    text-align: center;
+    &:hover {
+      background-color: $light-text;
+      color: $bkg-one;
+      font-weight: bold;
+    }
+    & .nav__icon {
+      position: absolute;
+      top: 10px;
+      left: 2%;
+    }
+  }
+
+  // Navbar media queries
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+
+    //make the dropdown button display
+    &__dropdown {
+      display: block;
+
+      &:hover .nav__dropdown-menu {
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        display: flex;
+        flex-flow: row wrap;
+        overflow: auto;
+      }
+    }
+    &__link-dropdown {
+      @include nav-buttons();
+      width: 100%;
+      background-color: $bkg-one;
+    }
+    //
+
+    // make the navbar links dissapear
+    &__link--icon {
+      display: none;
+    }
+    &__link-navbar {
+      display: none;
+    }
+  }
+
+  //end of media query
+
+  //styling for the links
+  &__link {
+    @include nav-buttons();
+  }
 }
 
 /* header */
@@ -68,23 +137,24 @@ body {
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  color: #ffc3c2;
+  color: $light-text;
 }
 
 .page-heading {
   font-size: 2rem;
+  padding-top: 10px;
   padding-left: 50px;
-}
-
-.page-heading--sub {
-  font-size: 1.4rem;
-  padding-left: 10px;
+  &--sub {
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
 }
 
 /* main section */
 
 .main {
   width: 100%;
+  height: auto;
   display: flex;
   flex-flow: column wrap;
 }
@@ -95,8 +165,8 @@ body {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  background-color: #803c3b;
-  color: #ffc3c2;
+  background-color: $bkg-one;
+  color: $light-text;
 }
 
 .step {
@@ -106,9 +176,6 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-
-.step-content {
 }
 
 /* skills */
@@ -129,8 +196,8 @@ body {
 
 .skill-name {
   width: 15%;
-  background-color: #803c3b;
-  color: #ffc3c2;
+  background-color: $bkg-one;
+  color: $light-text;
 }
 
 .skill-level {
@@ -140,12 +207,12 @@ body {
 
 .skill-progress-bar {
   width: 50%;
-  background-color: #ff7875;
+  background-color: $bkg-two;
 }
 
 .skill-percent {
   width: 49%;
   text-align: right;
-  background-color: #ffc3c2;
-  color: #ff7875;
+  background-color: $light-text;
+  color: $bkg-one;
 }
